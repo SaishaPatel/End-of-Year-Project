@@ -69,7 +69,7 @@ def create_quiz(unit, skills):
     """
     body = {"contents": [{"parts": [{"text": prompt}]}]}
     try:
-        response = requests.post(URL, json=body, timeout=25)
+        response = requests.post(URL, json=body, timeout=45)
         if response.status_code != 200:
             print(f"API error: {response.status_code}")
             return None
